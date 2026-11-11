@@ -34,4 +34,12 @@ plt.xlabel("Freq (Hz)")
 plt.ylabel("Amplitude (dB)")
 plt.xscale("log")
 
+#  Spectrogram:
+D = librosa.stft(array)
+S_db = librosa.amplitude_to_db(np.abs(D), ref = np.max)
+
+plt.figure().set_figwidth(12)
+librosa.display.specshow(S_db, x_axis = "time", y_axis = "hz")
+plt.colorbar()
+
 plt.show()
