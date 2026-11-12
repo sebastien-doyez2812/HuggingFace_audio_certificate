@@ -1,2 +1,4 @@
 matplotlib
 librosa
+gradio
+transformers
